@@ -36,4 +36,4 @@ but stopPropagation() is like the big guy who is the big dawg who does the job o
 
 preventDefault() blocks the default behavior of an individula element.
 
-on hte controray, the stopPropagation() blocks the flow of the event bubbling going to the top level of the DOM.
+On the controray, the stopPropagation() blocks the flow of the event bubbling going to the top level of the DOM.
