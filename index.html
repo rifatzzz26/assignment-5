@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Emergency Service Directory</title>
+    <link rel="icon" href="./assets/logo.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-madurai: "Hind Madurai", sans-serif;
+        --font-inter: "Inter", sans-serif;
+        --font-roboto: "Roboto", sans-serif;
+
+        --color-primary: #00a63e;
+        --color-primary-light: rgba(65, 255, 107, 0.1);
+        --color-subtitle: #5c5c5c;
+        --color-tag-bg: #f2f2f2;
+        --color-call-btn: #d4d6d5;
+        --color-history-card-bg: #fafafa;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="font-madurai">
+    <header
+      class="flex justify-between items-center gap-8 px-5 md:px-[3.75rem] py-4 md:py-6"
+    >
+      <img class="w-40 md:w-auto" src="./assets/Logo.png" alt="logo" />
+      <div
+        class="grid grid-cols-2 gap-3 md:flex md:justify-between md:items-center md:gap-5"
+      >
+        <div
+          class="bg-primary-light px-5 py-3 flex justify-center items-center gap-2.5 rounded-[3.125rem] font-black text-black text-lg leading-6 font-inter"
+        >
+          <span id="heart-count-element"></span>
+          <img class="size-7" src="./assets/heart.png" alt="heart" />
+        </div>
+        <div
+          class="bg-primary-light px-5 py-3 flex justify-center items-center gap-2.5 rounded-[3.125rem] font-black text-black text-lg leading-6 font-inter"
+        >
+          <span id="coin-count-element"></span>
+          <img class="size-7" src="./assets/coin.png" alt="coin" />
+        </div>
+        <div
+          class="col-span-2 bg-primary rounded-[3.125rem] px-9 py-3 font-semibold text-base text-white flex justify-center items-center gap-1.5 font-inter"
+        >
+          <span id="copy-count-element"></span> Copy
+        </div>
+      </div>
+    </header>
+    <main class="bg-[#F5FFF6]">
+      <!-- banner section -->
+      <section
+        class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] font-madurai flex flex-col items-center justify-center gap-3 px-8 md:px-[3.75rem] py-5"
+      >
+        <img
+          class="size-16 md:size-[5.75rem]"
+          src="./assets/logo-dark.png"
+          alt="logo-dark"
+        />
+        <h3 class="text-white font-bold text-3xl md:text-[2.5rem] text-center">
+          Emergency Service Directory
+        </h3>
+        <p class="text-white font-semibold text-center text-sm md:text-xl">
+          Government Emergency Services at Your Fingertip - A Project by
+          Government of the People's Republic of Bangladesh
+        </p>
+      </section>
+
+      <!-- card and history grid -->
+      <section
+        class="px-8 md:px-16 py-6 md:py-12 w-full grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8"
+      >
+        <div
+          id="card-container"
+          class="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8"
+        ></div>
+        <div class="rounded-xl p-6 bg-white shadow flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <div class="font-roboto font-medium text-xl leading-7 py-3">
+              <i class="fa-regular fa-clock text-subtitle"></i>
+              Call History
+            </div>
+            <div
+              id="call-history-clear-button"
+              class="bg-primary rounded-[3.125rem] px-9 py-3 font-semibold text-base text-white transitoin-all ease-out duration-150 hover:bg-primary/50"
+            >
+              Clear
+            </div>
+          </div>
+          <div id="call-history-container-element" class="flex flex-col gap-2">
+            <!-- card START -->
+            <!-- <div class="p-4 flex justify-between items-center gap-4 rounded-lg bg-history-card-bg">
+                        <div class="flex flex-col gap-1">
+                            <h4 class="font-inter font-semibold text-lg">Fire Service Number</h4>
+                            <p class="font-madurai text-subtitle">999</p>
+                        </div>
+                        <p class="font-madurai text-lg">11:36:58 AM</p>
+                    </div> -->
+            <!-- card END -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
